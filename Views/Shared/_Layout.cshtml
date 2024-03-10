@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FoodApplication.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/jquery-ui.min.css" />
 </head>
 <body>
     <header class="position-sticky top-0">
@@ -24,7 +25,7 @@
                             <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-pink fw-bold">Receips</a>
+                            <a class="nav-link text-pink fw-bold" asp-area="" asp-controller="Recipe" asp-action="Index">Receips</a>
                         </li><li class="nav-item">
                             <a class="text-pink nav-link fw-bold">Menu</a>
                         </li>
@@ -33,13 +34,13 @@
             </div>
         </nav>
     </header>
-    <div class="container">
+    <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top text-white">
+    <footer class="border-top text-white p-3">
         <div class="container mt-2">
            <div class="row">
                <div class="col-sm-4 col-md-4 col-xl-4">
@@ -49,33 +50,34 @@
                 <div class="col-sm-4 col-md-4 col-xl-4">
                     <h4>Contact Us</h4>
                     <div class="mt-3 mb-2">
-                        <span> <i class="fa-brands fa-instagram fs-4"></i></span>
-                        <span class="fs-5"> Instagram</span>
+                        <span> <i class="fa-brands fa-instagram fs-5"></i></span>
+                        <span class="fs-6 mx-1"> Instagram</span>
                     </div>
                     <div class="mb-2">
-                        <span><i class="fa-brands fa-whatsapp fs-4"></i> </span>
-                        <span class="fs-5"> WhatsApp</span>
+                        <span><i class="fa-brands fa-whatsapp fs-5"></i> </span>
+                        <span class="fs-6 mx-1"> WhatsApp</span>
                     </div>
                     <div class="mb-2">
-                        <span><i class="fa-brands fa-facebook fs-4"></i> </span>
-                        <span class="fs-5"> Facebook</span>
+                        <span><i class="fa-brands fa-facebook fs-5"></i> </span>
+                        <span class="fs-6 mx-1"> Facebook</span>
                     </div> 
                     <div class="mb-2">
-                        <span><i class="fa-regular fa-envelope fs-4"></i> </span>
-                        <span class="fs-5"> E-Mail</span>
+                        <span><i class="fa-regular fa-envelope fs-5"></i> </span>
+                        <span class="fs-6 mx-1"> E-Mail</span>
                     </div>
                 </div>
-                <div class="col-sm-4 col-md-4 col-xl-4">
+                <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4">
                     <h4>Address:</h4>
                     <pre class="fs-5">Latur, Maharashtra - 413512</pre>
                 </div>
                 <div>
-                    <p class="text-center"> Powered By</p>
+                    <h5 class="text-center"> Powered By Forkify</h5>
                 </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/jquery-ui.min.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
